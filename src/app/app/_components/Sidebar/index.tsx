@@ -6,6 +6,7 @@ import { DashboardSidebarHeader, DashboardSidebarMain, DashboardSidebarNav, Dash
 import { HomeIcon, MixerVerticalIcon } from "@radix-ui/react-icons";
 import { Logo } from "@/components/Logo";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -86,6 +87,25 @@ export function Sidebar() {
               <HomeIcon className="w-3 h-3 mr-3" />
               Home
             </DashboardSidebarNavLink>
+
+            <DashboardSidebarNavLink
+              href="/app/sales"
+              active={isActive('/app/sales')}
+            >
+              <IoIosAddCircleOutline className="w-3 h-3 mr-3" />
+              Vendas
+            </DashboardSidebarNavLink>
+
+
+            <DashboardSidebarNavLink
+              href="/app/registrations"
+              active={isActive('/app/registrations')}
+            >
+              <IoIosAddCircleOutline className="w-3 h-3 mr-3" />
+              Cadastros
+            </DashboardSidebarNavLink>
+
+            
             <DashboardSidebarNavLink
               href="/app/settings"
               active={isActive('/app/settings')}

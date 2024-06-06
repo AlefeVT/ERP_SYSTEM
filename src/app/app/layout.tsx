@@ -11,9 +11,11 @@ export default async function Layout({ children }: PropsWithChildren) {
         <div className="flex h-screen">
           <Sidebar />
         </div>
-        <main className='w-full h-screen'>
+        <main className='w-full h-screen '>
           <Header />
-          {children}
+          <div className='w-full h-full overflow-y-auto'>
+            {children}
+          </div>
         </main>
       </div>
     </ClientSideProvider>
